@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animated page</title>
+        <link rel="stylesheet" href="./assets/css/style.css" class="css">
+        <link
+            href="./assets/css/bootstrap.min.css"
+            rel="stylesheet" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="main">
+            <!-- header section  -->
+            <div class="header-container">
+                <div class="icon-container" id="firstPageBtn">
+                    <input type="radio" onchange="handleChange()" checked value="1"
+                        name="page" id="first">
+                        <span class="pageNumber">1</span>
+                </div>
+                <div class="icon-container" id="secondpagebtn">
+                    <input type="radio" onchange="handleChange()"  value="2" name="page" id="second"> <span class="pageNumber">2</span>
+                </div>
+                <div class="icon-container" id="thirdPagebtn">
+                    <input type="radio" onchange="handleChange()"  value="3" name="page" id="third">
+                    <span class="pageNumber">3</span>
+                </div>
+            </div>
+            <!-- first page section  -->
+            <div class="page-container first" id="first-page">
+                <div class="taxt-container">
+                    <h2>This is Heading</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="body-container">
+                    <div class="first-row">
+                        <div class="icon-with-name">
+                            <img name="one" class="icon-item" src="./assets/img/1.jpg"></img>
+                            <span>One</span>
+                        </div>
+                        <div class="icon-with-name">
+                            <img name="two" class="icon-item" src="./assets/img/2.jpg"></img>
+                            <span>Two</span>
+                        </div>
+                        <div class="icon-with-name">
+                            <img name="three" class="icon-item" src="./assets/img/3.jpg"></img>
+                            <span>Three</span>
+                        </div>
+                        
+                    </div>
+                    <div class="second-row">
+                        <div class="icon-with-name">
+                            <img name="four"  class="icon-item" src="./assets/img/4.jpg"></img>
+                            <span>Four</span>
+                        </div>
+                        <div class="icon-with-name">
+                            <img name="five"  class="icon-item" src="./assets/img/5.jpg"></img>
+                            <span>Five</span>
+                        </div>
+                        <div class="icon-with-name">
+                            <img name="six"  class="icon-item" src="./assets/img/6.jpg"></img>
+                            <span>Six</span>
+                        </div>
+                    </div>
+                    <div class="third-row">
+                        <div class="icon-with-name">
+                            <img name="seven"  class="icon-item" src="./assets/img/7.jpg""></img>
+                            <span>Seven</span>
+                        </div>
+                        <div class="icon-with-name">
+                            <img name="eight"  class="icon-item" src="./assets/img/8.jpg"></img>
+                            <span>Eight</span>
+                        </div>
+                        <div class="icon-with-name">
+                            <img name="nine"  class="icon-item" src="./assets/img/1.jpg"></img>
+                            <span>Nine</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <p>Pick your favourite, and go down the rabbit hole , or...</p>
+
+                </div>
+            </div>
+            <!-- second page section  -->
+                <div class="page-container second" id="second-page">
+                <div class="image-container">
+                    <div class="first-row">
+                        <div class="image1 image-wrapper">
+                            <div class="text-wrapper" >
+                                <p class="image-name image-placeholder">
+                                    A0
+                                </p>
+                                <img class="image-item"   src="./assets/img/result/A0.png" alt="user1" onclick="handleImageClick('A')">
+                            </div>
+                        </div>
+                        <div class="image2 image-wrapper">
+                            <div >
+                                <p class="image-name image-placeholder">
+                                    B0
+                                </p>
+                                <img  class="image-item"  src="./assets/img/result/B0.png" alt="user1" onclick="handleImageClick('B')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-row mt-3">
+                        
+                        <div class="image3 image-wrapper">
+                            <div >
+                                <p class="image-name image-placeholder">
+                                    C0
+                                </p>
+                                <img class="image-item"  src="./assets/img/result/C0.png" alt="user1" onclick="handleImageClick('C')" >
+                            </div>
+                        </div>
+                        <div class="image4 image-wrapper">
+                            <div>
+                                <p class="image-name image-placeholder">
+                                    D0
+                                </p>
+                                <img class="image-item"  src="./assets/img/result/D0.png" alt="user1" onclick="handleImageClick('D')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-page-footer">
+                    <div class="secondpage-text-container mt-3">
+                        <p>Pick your favourite, and go down the rabbit hole , or...</p>
+                    </div>
+                    <div class="button-container">
+                        <div class="row">
+                            <div>
+                                <button onclick="handleRegenButtonClick()" type="button" class="btn btn-secondary">Regen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- third page section  -->
+            <div class="page-container third " id="third-page" >
+                <div class="image-container">
+                    <div class="first-row">
+                        <div class="third-page-image1 third-page-image-wrapper">
+                            <div class="third-content-wrapper" >
+                                <p class="third-page-image-name image-placeholder">
+                                    A0
+                                </p>
+                                <img class="third-page-image-item"  data-bs-toggle="modal" data-bs-target="#modalWithImage"   src="./assets/img/result/A0.png" alt="user1" onclick="thirdPageImageClick(this.src)">
+                            </div>
+                        </div>
+                        <div class="third-page-image2 third-page-image-wrapper">
+                            <div  class="third-content-wrapper" >
+                                <p class="third-page-image-name image-placeholder">
+                                    A1
+                                </p>
+                                <img  class="third-page-image-item" data-bs-toggle="modal" data-bs-target="#modalWithImage"  src="./assets/img/result/A1.png" alt="user1" onclick="thirdPageImageClick(this.src)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-row mt-3">
+                        
+                        <div class="third-page-image3 third-page-image-wrapper">
+                            <div   class="third-content-wrapper">
+                                <p class="third-page-image-name image-placeholder">
+                                   A2
+                                </p>
+                                <img class="third-page-image-item" data-bs-toggle="modal" data-bs-target="#modalWithImage"  src="./assets/img/result/A2.png"alt="user1" onclick="thirdPageImageClick(this.src)" >
+                            </div>
+                        </div>
+                        <div class="third-page-image1 third-page-image-wrapper">
+                            <div  class="third-content-wrapper">
+                                <p  class="third-page-image-name image-placeholder ">
+                                    A3
+                                </p>
+                                <img class="third-page-image-item" data-bs-toggle="modal" data-bs-target="#modalWithImage"  src="./assets/img/result/A3.png" alt="user1" onclick="thirdPageImageClick(this.src)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="third-page-footer">
+                    <div class="secondpage-text-container mt-3">
+                        <p>Nothing? try again with a diff food then</p>
+                    </div>
+                    <div class="button-container">
+                        <div class="row">
+                            <div>
+                                <button onclick="handlehomeButtonClick()" type="button" class="btn btn-secondary">Home</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal  -->
+        <div class="modal fade" id="modalWithImage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="third-page-image-container">
+                    <img id="modalImage" src="./assets/img/user1.jpg" alt="">
+                </div>
+                <div class="button-container mt-5">
+                    <div class="row">
+                        <div>
+                            <button  onclick="handleSaveButtonClick()" type="button" class="btn btn-secondary popup-btn">save</button>
+                            <button onclick="handleShareButtonClick()" type="button" class="btn btn-secondary popup-btn">share</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+    <script src="./assets/js/index.js"></script>
+    <script
+        src="./assets/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+        <script src="./assets/js/fileSaver.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>

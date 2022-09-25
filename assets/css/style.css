@@ -1,0 +1,350 @@
+:root {
+    --primaryHeight: 159px;
+}
+
+.icon-container>input[type='radio'] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    background: transparent;
+}
+
+.icon-container>input[type='radio']:checked {
+    background: transparent;
+}
+
+.icon-container>input[type='radio']#third,
+.icon-container>input[type='radio']#second {
+    height: 0px;
+    width: 0px;
+}
+
+.icon-container>.pageNumber {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 21px;
+    transition: font-size 0.5s
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10vw;
+    padding: 2vh 0px 0px;
+}
+
+.header-container>.icon-container {
+    cursor: pointer;
+    display: grid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background: #A5A5A5;
+    color: #ffffff;
+    transition: height 0.5s, width 0.5s;
+    border: 1px solid #7C7C7C;
+}
+
+.taxt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 20px;
+    font-family: cursive;
+}
+
+.icon-item {
+    height: 100px;
+    width: 100px;
+    border-radius: 60px;
+    border: 5px solid gray;
+    cursor: pointer;
+}
+
+.first-row,
+.second-row,
+.third-row {
+    display: flex;
+    justify-content: center;
+    column-gap: 10vw;
+}
+
+.second-row,
+.third-row {
+    margin-top: 1rem
+}
+
+.footer-container {
+    padding: 0px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.secondpage-text-container {
+    padding: 0px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#second-page,
+#third-page {
+    display: none;
+}
+
+.image-container {
+    padding: 3vh;
+}
+
+.image-container>.first-row,
+.image-container>.second-row {
+    height: 170px;
+}
+
+.image-container {
+    margin-top: 10vh;
+}
+
+.image-wrapper {
+    height: 0px;
+    width: 130px;
+    overflow: hidden;
+    border: none;
+    border-radius: 8px;
+    transition: height 2s ease-in, border-width 2s linear;
+    cursor: pointer;
+}
+
+.image-wrapper>div>img.image-item {
+    opacity: 0;
+    object-fit: cover;
+    height: var(--primaryHeight);
+    width: 100%;
+    transition: opacity 1.5s ease-in;
+}
+
+.third-page-image-wrapper>div>img.third-page-image-item {
+    opacity: 0;
+    object-fit: cover;
+    height: var(--primaryHeight);
+    width: 100%;
+    transition: opacity 1.5s ease-in;
+}
+
+.third-page-image-wrapper {
+    height: 0px;
+    width: 130px;
+    overflow: hidden;
+    border: none;
+    border-radius: 8px;
+    transition: height 2s ease-in, border-width 2s linear;
+    cursor: pointer;
+}
+
+
+.third-page-image-wrapper>div>.third-page-image-name {
+    padding: 50px 22px 22px;
+}
+
+.image-wrapper>div>.image-name {
+    padding: 35px 10px 15px;
+}
+
+.image-placeholder {
+    text-align: center;
+    font-size: 49px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-page-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-page-image-container>img {
+    height: 424px;
+    width: 333px;
+    object-fit: fill;
+    border-radius: 30px;
+}
+
+
+#modalImage {
+    object-fit: cover;
+}
+
+.modal-content {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.modal-dialog {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-with-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.icon-with-name>span {
+    font-family: cursive;
+}
+
+.second-page-footer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 12vh;
+}
+
+.third-page-footer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 12vh;
+}
+
+#modalWithImage {
+    height: auto;
+}
+
+.popup-btn {
+    background-color: #363b3f !important;
+}
+
+@media (min-height: 400px) and (max-height: 520px) {
+    .image-container {
+        margin-top: 0vh;
+    }
+
+    .second-page-footer {
+        bottom: 1vh;
+    }
+
+    .container>.second-row {
+        height: 140px;
+    }
+
+    .secondpage-text-container>p {
+        margin-bottom: 0px !important;
+    }
+
+    .image-wrapper>div>img.image-item,
+    .third-page-image-wrapper>div>img.third-page-image-item {
+        height: 140px;
+    }
+
+    .icon-with-name>img {
+        height: 10vh;
+        width: 10vh;
+    }
+
+    .second-row,
+    .third-row {
+        margin-top: 0px;
+    }
+
+    .text-container {
+        padding: 1vh 20px;
+    }
+
+    .text-container>p {
+        padding: 0 38px;
+        margin-bottom: 0px;
+    }
+
+    .image-container>.first-row,
+    .image-container>.second-row {
+        height: 140px;
+    }
+
+    .third-page-footer {
+        bottom: 3vh;
+    }
+
+}
+
+@media (min-height: 520px) and (max-height: 720px) {
+    .icon-with-name>img {
+        height: 11vh;
+        width: 11vh;
+    }
+
+    #modalWithImage {
+        top: -6vh;
+    }
+
+    .second-row,
+    .third-row {
+        margin-top: 0px;
+    }
+
+    .second-page-footer,
+    .third-page-footer {
+        bottom: 6vh;
+    }
+
+    .image-container>.first-row,
+    .image-container>.second-row {
+        height: 140px;
+    }
+
+    .image-container {
+        margin-top: 4vh;
+    }
+
+    .image-wrapper>div>img.image-item,
+    .third-page-image-wrapper>div>img.third-page-image-item {
+        height: 140px;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 370px) {
+    .footer-container {
+        padding: 0px 35px;
+        margin-top: 10px;
+        height: 57px;
+        overflow: hidden;
+    }
+
+    .secondpage-text-container {
+        padding: 0px 38px;
+    }
+
+    #modalImage {
+        overflow: hidden;
+    }
+}
